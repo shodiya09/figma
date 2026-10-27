@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myteam - Design System</title>
+    <style>
+        /* Standart chekkalarni tozalash va shrift */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            color: #014E56;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        /* Asosiy oq sahifa konteyneri */
+        .container {
+            width: 1000px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding-bottom: 80px;
+        }
+
+        /* To'q ko'k sarlavha qismi (Header) */
+        .header {
+            background-color: #014E56;
+            height: 220px;
+            padding: 45px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-brand {
+            color: #F67E7E;
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title {
+            color: #ffffff;
+            font-size: 56px;
+            font-weight: bold;
+        }
+
+        /* Sarlavhaning o'ng tarafidagi geometrik shakllar dizayni */
+        .header-decor {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        .decor-circle {
+            width: 160px;
+            height: 160px;
+            background-color: #79C8C7;
+            border-radius: 50%;
+            margin-top: -30px;
+            margin-right: -30px;
+            opacity: 0.5;
+        }
+
+        /* Kontent qismi */
+        .content {
+            padding: 60px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: bold;
+            color: #014E56;
+            margin-bottom: 45px;
+        }
+
+        .subsection-title {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: #014E56;
+            opacity: 0.7;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        /* Ranglar paneli uchun to'plamlar (Grid va Flexbox) */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .color-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* Rang ko'rsatuvchi doiralar */
+        .color-circle {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Ma'lumot matnlari */
+        .color-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .color-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #014E56;
+            margin-bottom: 2px;
+        }
+
+        .color-meta {
+            font-size: 13px;
+            color: #7f9799;
+            font-weight: 500;
+        }
+
+        .color-meta span {
+            color: #a4b6b8;
+        }
+
+        /* Maxsus oq doira uchun chegara */
+        .border-circle {
+            border: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. HEADER (Sarlavha bloki) -->
+        <header class="header">
+            <span class="header-brand">myteam</span>
+            <h1 class="header-title">Design System</h1>
+            <!-- O'ng tarafdagi bezak dekoratsiyasi -->
+            <div class="header-decor">
+                <img src="/Group 8.png" alt="Decorative Circle">
+            </div>
+        </header>
+
+        <!-- 2. MAIN CONTENT (Asosiy qism) -->
+        <main class="content">
+            <h2 class="section-title">Colors</h2>
+
+            <!-- PRIMARY SECTION -->
+            <h3 class="subsection-title">Primary</h3>
+            <div class="color-grid">
+                <!-- Midnight Green -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #014E56;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Midnight Green</div>
+                        <div class="color-meta"><span>HEX:</span> #014E56</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(1, 78, 86)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(186°, 98%, 17%)</div>
+                    </div>
+                </div>
+                <!-- Light Coral -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #F67E7E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Coral</div>
+                        <div class="color-meta"><span>HEX:</span> #F67E7E</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(246, 126, 126)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(0°, 87%, 73%)</div>
+                    </div>
+                </div>
+                <!-- White -->
+                <div class="color-card">
+                    <div class="color-circle border-circle" style="background-color: #FFFFFF;"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-meta"><span>HEX:</span> #FFFFFF</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(255, 255, 255)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(0°, 0%, 100%)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECONDARY SECTION -->
+            <h3 class="subsection-title">Secondary</h3>
+            <div class="color-grid">
+                <!-- Rapture Blue -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #79C8C7;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Rapture Blue</div>
+                        <div class="color-meta"><span>HEX:</span> #79C8C7</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(121, 200, 199)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(179°, 42%, 63%)</div>
+                    </div>
+                </div>
+                <!-- Police Blue -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #2C6269;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Police Blue</div>
+                        <div class="color-meta"><span>HEX:</span> #2C6269</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(44, 98, 105)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(187°, 41%, 29%)</div>
+                    </div>
+                </div>
+                <!-- Deep Jungle Green -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #004047;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Jungle Green</div>
+                        <div class="color-meta"><span>HEX:</span> #004047</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(0, 64, 71)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(186°, 100%, 14%)</div>
+                    </div>
+                </div>
+                <!-- Sacramento State Green -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #012F34;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Sacramento State Green</div>
+                        <div class="color-meta"><span>HEX:</span> #012F34</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(1, 47, 52)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(186°, 96%, 10%)</div>
+                    </div>
+                </div>
+                <!-- Dark Green -->
+                <div class="color-card">
+                    <div class="color-circle" style="background-color: #002529;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Green</div>
+                        <div class="color-meta"><span>HEX:</span> #002529</div>
+                        <div class="color-meta"><span>RGB:</span> rgb(0, 37, 41)</div>
+                        <div class="color-meta"><span>HSL:</span> hsl(186°, 100%, 8%)</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
